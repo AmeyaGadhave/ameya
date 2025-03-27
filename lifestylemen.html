@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Product Listing</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Heading 1 Styles */
+    h1 {
+      font-family: Calibri; /* Change font family */
+      color: black;
+      margin-top: 10px; 
+      margin-left: 200px;  
+    }
+
+    /* Heading 2 Styles */
+    h5 {
+      font-family: Calibri Light (Headings); /* Change font family */
+      color: black ; /* Change font color */
+       
+      margin-left: 200px;
+    }
+    h5 {
+      font-family: Calibri Light (Headings); /* Change font family */
+      color: black ; /* Change font color */
+      margin-top: 10px; 
+      margin-left: 200px;
+    }
+
+    /* Product Card Styles */
+    .product-card {
+      margin-bottom: 20px;
+    }
+
+    /* Product Price Styles */
+    .product-price {
+      color: black; /* Change price font color */
+    }
+
+    body {
+      background-color: rgb(229, 238, 184); /* Change background color */
+    }
+    .logo-img {
+      margin-top: 20px; /* Adjust the margin from the top */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .slider-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px; /* Adjust the margin from the top */
+    }
+    .slider {
+      width: 100%;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+    }
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .button-container {
+    text-align: center;
+    margin-bottom: 100px;
+    padding-left: 350px;
+  }
+
+  .button-container .btn {
+    margin: 0 10px; /* Adjust as needed */
+    background-color: brown;
+    color:white;
+  }
+
+    
+    
+    
+  </style>
+</head>
+<body>
+    <img src="https://blog.lifestylestores.com/wp-content/uploads/2021/02/Lifestyle-Logo-1160x444-1-800x306.webp" width="400" height="200"  class="logo-img"
+
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form class="my-3">
+              <div class="input-group">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <h1 class="my-4">MENS</h1>
+
+      <div class="slider-container">
+        <div class="slides">
+          <div class="slide">
+              <img src="https://cms.landmarkshops.in/cdn-cgi/image/w=1232,q=70,fit=cover/LS-Fest/LS-new/desktop-dept-12modblock-oneBythree-A-Men-18Apr24A.gif"  width="900" height="500" alt="FASHIONISTA">
+          </div>
+          <div class="slide">
+            <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://b37db184fa09e5ba0292-662caecad9dd967cd19824f80fb1538c.lmsin.net/LS-Fest/LS-new/desktop-men-8modblock-oneBythree-D-12Mar24.jpg" width="900" height="500" alt="Image 2">
+          </div>
+          <div class="slide">
+            <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://b37db184fa09e5ba0292-662caecad9dd967cd19824f80fb1538c.lmsin.net/LS-Fest/LS-new/desktop-dept-13modblock-oneBythree-A-menstripbanner-12Mar2024.jpg" width="900" height="500" alt="Image 3">
+          </div>
+        </div>
+      </div>
+      <script>
+        let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      
+      const showSlide = index => slides.forEach((slide, i) => slide.style.display = i === index ? 'block' : 'none');
+      const nextSlide = () => showSlide(currentSlide = (currentSlide + 1) % totalSlides);
+      const prevSlide = () => showSlide(currentSlide = (currentSlide - 1 + totalSlides) % totalSlides);
+      
+      setInterval(nextSlide, 3000);
+      </script>    
+
+      
+
+
+<p style="font-family: Times New Roman; color: black; font-size: 28px; margin-top: 10px; margin-left: 200px ;">SHIRTS</p>
+
+  <!-- Product Listing -->
+  <div class="container">
+    <div class="row">
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://c91c3c982cd2296581e1-2751fb2ef0ac9c796a59d48739fed575.lmsin.net/lifestyle/1000013835262-Blue-Blue-1000013835262_01-2100.jpg" width="300" height="300" alt="Product 1">
+          <div class="card-body">
+            <p  class="card-text product-price">Men Striped Regular Fit Casual Shirt</P>
+            <p  class="card-text product-price">Rs 649.00</P>
+            <P  class="card-text product-price">Sale: 10%</P>
+            <a  href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+            <a href="#" class="btn btn-secondary" style="background-color: black;">Add to cart</a>
+            
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000012948317-Blue-Navy-1000012948317_01-2100.jpg" width="300" height="300" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            
+            
+            <p class="card-text product-price">Men Printed Regular Fit Casual Shirt </p>
+            <p class="card-text product-price">Rs 1200.00</p>
+            <p class="card-text product-price">Sale: 30% off </p>
+
+            <a href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+            <a href="#" class="btn btn-secondary" style="background-color: black;">Add to cart</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more product cards as needed -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://c91c3c982cd2296581e1-2751fb2ef0ac9c796a59d48739fed575.lmsin.net/lifestyle/1000013834572-Grey-Grey-1000013834572_03-2100.jpg" width="300" height="300"  alt="Product 2">
+          <div class="card-body">
+            
+            <p class="card-text product-price">Regular resort shirt</p>
+            <p class="card-text product-price">Rs 1200.00</p>
+            <p class="card-text product-price"> Sale:30% off</p>
+            <a href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+            <a href="#" class="btn btn-primary" style="background-color: black;">Add to cart</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <p style="font-family: Arial; color: black; font-size: 16px; text-align: left;">T-SHIRTS</p>
+
+      <div class="container">
+        <div class="row">
+          <!-- Product 1 -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000012950994-Black-Black-1000012950994_01-2100.jpg" width="300" height="300" alt="Product 1">
+              <div class="card-body">
+                <p  class="card-text product-price">Loose Printed T-shirt</P>
+                <p  class="card-text product-price">Rs 400.00</P>
+                <P  class="card-text product-price">Sale: 20%</P>
+                <a  href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                <a href="#" class="btn btn-secondary" style="background-color: black;">Add to cart</a>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000004479575-Var1105-White-White-1000004479575-Var1105_01-2100.jpg" width="300" height="300" class="card-img-top" alt="Product 2">
+              <div class="card-body">
+                
+                
+                <p class="card-text product-price">Regular Fit T-shirt </p>
+                <p class="card-text product-price">Rs 500.00</p>
+                <p class="card-text product-price">Sale: 30% off </p>
+    
+                <a href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                <a href="#" class="btn btn-secondary" style="background-color: black;">Add to cart</a>
+                
+              </div>
+            </div>
+          </div>
+    
+          <!-- Add more product cards as needed -->
+          <div class="col-md-4">
+            <div class="card product-card">
+              <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000012458718-Green-DarkGreen-1000012458718_01-2100.jpg" width="300" height="300"  alt="Product 2">
+              <div class="card-body">
+                
+                <p class="card-text product-price">Printed T-shirt</p>
+                <p class="card-text product-price">Rs 400.00</p>
+                <p class="card-text product-price"> Sale:30% off</p>
+                <a href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                <a href="#" class="btn btn-primary" style="background-color: black;">Add to cart</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <p style="font-family: Arial; color: black; font-size: 16px; text-align: left;">Trousers</p>
+
+          <div class="container">
+            <div class="row">
+              <!-- Product 1 -->
+              <div class="col-md-4">
+                <div class="card product-card">
+                  <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000013320313-Beige-DarkKhaki-1000013320313_01-2100.jpg" width="300" height="300" alt="Product 1">
+                  <div class="card-body">
+                    <p  class="card-text product-price">Men Slim Straight Casual Trousers</P>
+                    <p  class="card-text product-price">Rs 2000.00</P>
+                    <P  class="card-text product-price">Sale: 10%</P>
+                    <a  href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                    <a href="#" class="btn btn-secondary" style="background-color: black;">Add to cart</a>
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- Product 2 -->
+              <div class="col-md-4">
+                <div class="card product-card">
+                  <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000011914745-Grey-DarkGrey-1000011914745_01-2100.jpg" width="300" height="300" class="card-img-top" alt="Product 2">
+                  <div class="card-body">
+                    
+                    
+                    <p class="card-text product-price"> Men Solid Slim Fit Casual Trousers </p>
+                    <p class="card-text product-price">Rs 2500.00</p>
+                    <p class="card-text product-price">Sale: 30% off </p>
+        
+                    <a href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                    <a href="#" class="btn btn-secondary" style="background-color: black;">Add to cart</a>
+                    
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Add more product cards as needed -->
+              <div class="col-md-4">
+                <div class="card product-card">
+                  <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=85,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000011998603-Green-Olive-1000011998603_01-2100.jpg" width="300" height="300"  alt="Product 2">
+                  <div class="card-body">
+                    
+                    <p class="card-text product-price">Regular Fit Cropped cotton chinos</p>
+                    <p class="card-text product-price">Rs 1999.00</p>
+                    <p class="card-text product-price"> Sale:30% off</p>
+                    <a href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                    <a href="#" class="btn btn-primary" style="background-color: black;">Add to cart</a>
+                    
+                  </div>
+                </div>
+              </div>
+
+<p style="font-family: Arial; color: black; font-size: 16px; text-align: left;">SMARTLOOKS</p>
+
+
+              <div class="container">
+                <div class="row">
+                  <!-- Product 1 -->
+                  <div class="col-md-4">
+                    <div class="card product-card">
+                      <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F93%2Fa0%2F93a09a8b9cb0e956377153d2f3857bbfb7bd84ec.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" width="300" height="300" alt="Product 1">
+                      <div class="card-body">
+                        <p  class="card-text product-price">Regular Fit Jacket</P>
+                        <p  class="card-text product-price">Rs 2000.00</P>
+                        <P  class="card-text product-price">Sale: 10%</P>
+                        <a  href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                        <a href="#" class="btn btn-secondary" style="background-color: black;">Add to cart</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Product 2 -->
+                  <div class="col-md-4">
+                    <div class="card product-card">
+                      <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc1%2F85%2Fc185e088726346b29907f834e46dd5a694585566.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" width="300" height="300" class="card-img-top" alt="Product 2">
+                      <div class="card-body">
+                        
+                        
+                        <p class="card-text product-price">Regular Fit Linen-blend shirt </p>
+                        <p class="card-text product-price">Rs 1500.00</p>
+                        <p class="card-text product-price">Sale: 30% off </p>
+            
+                        <a href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                        <a href="#" class="btn btn-secondary" style="background-color: black;">Add to cart</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+            
+                  <!-- Add more product cards as needed -->
+                  <div class="col-md-4">
+                    <div class="card product-card">
+                      <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fea%2Fce%2Feace7e4c362aea54868650bc7793e45bd902c74b.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]" width="300" height="300"  alt="Product 2">
+                      <div class="card-body">
+                        
+                        <p class="card-text product-price">Regular Fit Tailored joggers</p>
+                        <p class="card-text product-price">Rs 1999.00</p>
+                        <p class="card-text product-price"> Sale:30% off</p>
+                        <a href="#" class="btn btn-primary" style="background-color: black;">BUY</a>
+                        <a href="#" class="btn btn-primary" style="background-color: black;">Add to cart</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button-container">
+                    <a href="homepage.html" class="btn btn-secondary">HOME</a>
+                    <a href="lifestylemen.html" class="btn btn-secondary">MENS</a>
+                    <a href="lifestylewomen.html" class="btn btn-secondary">WOMENS</a>
+                    <a href="lifestylekids.html" class="btn btn-secondary">KIDS</a>
+                  </div>
+                  
+
+
+
+
+
+      
+
+ 
+
+      
+      
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Optional, if you need JS functionality) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+  
+
+
+</body>
+
+</html>
